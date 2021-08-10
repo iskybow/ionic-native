@@ -66,13 +66,15 @@ export class AppMetrica extends IonicNativePlugin {
 
   /**
    * This function does something
-   * @param name {string} Some param to configure something
+   * @param name {string} event name
+   * @param event {object} event params
+   * reportEvent('user-balance', {'balance', '2000'})
    * @return {Promise<any>} Returns a promise that resolves when something happens
    */
   @Cordova({
     sync: true,
   })
-  reportEvent(name: string): Promise<any> {
+  reportEvent(name: string, event: object): Promise<any> {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
 }
